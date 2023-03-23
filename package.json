@@ -16,7 +16,10 @@
     "@midwayjs/typeorm": "^3.10.15",
     "@midwayjs/validate": "^3.0.0",
     "@midwayjs/view-ejs": "^3.10.15",
+    "mini-svg-data-uri": "^1.4.4",
     "mysql2": "^3.2.0",
+    "nanoid": "^3.0.0",
+    "svg-captcha": "^1.4.0",
     "typeorm": "^0.3.12"
   },
   "devDependencies": {

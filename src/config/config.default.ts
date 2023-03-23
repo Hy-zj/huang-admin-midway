@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: huangyue
  * @LastEditors: huangyue
- * @LastEditTime: 2023-03-23 15:56:38
+ * @LastEditTime: 2023-03-23 18:04:27
  */
 import { MidwayConfig } from '@midwayjs/core';
 import { join } from 'path'
@@ -64,5 +64,34 @@ export default {
     secret: 'abcdefghijklmnopqrstuvwxyz', // fs.readFileSync('xxxxx.key')
     /**令牌有效期（默认30分钟） */
     expiresIn: '640m', // https://github.com/vercel/ms
+  },
+  /**char 字符验证码配置 */
+  charCaptcha: {
+    /**干扰线条的数量 */
+    noise: 4,
+    /**验证码的字符是否有颜色，默认没有，如果设定了背景，则默认有 */
+    color: true,
+    // 验证码图片背景颜色
+    background: '#f5f5f5',
+    /**验证码长度 */
+    size: 4,
+    /**验证码字符中排除 0o1i */
+    ignoreChars: '0o1i',
+  },
+
+  /**math 数组计算码配置 */
+  mathCaptcha: {
+    /**干扰线条的数量 */
+    noise: 4,
+    /**验证码的字符是否有颜色，默认没有，如果设定了背景，则默认有 */
+    color: true,
+    // 验证码图片背景颜色
+    background: '#f5f5f5',
+    /**计算式，默认"+"，可选"+", "-" or "+/-" */
+    mathOperator: '+',
+    /**算数值最小值，默认1 */
+    mathMin: 1,
+    /**算数值最大值，默认9 */
+    mathMax: 9,
   },
 } as MidwayConfig;

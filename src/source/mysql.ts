@@ -2,7 +2,7 @@
  * @Description: 封装数据库操作
  * @Author: huangyue
  * @LastEditors: huangyue
- * @LastEditTime: 2023-03-23 16:24:21
+ * @LastEditTime: 2023-03-23 17:27:21
  */
 
 import { Provide, Inject, Scope, ScopeEnum } from "@midwayjs/core";
@@ -12,7 +12,7 @@ import { DataSource, QueryRunner } from "typeorm";
 
 @Provide()
 @Scope(ScopeEnum.Singleton) //单例模式
-export class MysqlManger {
+export class MysqlManager {
     @Inject()
     private dataSourceManager: TypeORMDataSourceManager;
 
