@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: huangyue
  * @LastEditors: huangyue
- * @LastEditTime: 2023-03-23 18:04:27
+ * @LastEditTime: 2023-03-24 15:09:53
  */
 import { MidwayConfig } from '@midwayjs/core';
 import { join } from 'path'
@@ -56,7 +56,11 @@ export default {
       db: 0,
     },
   },
+  /**请求头令牌自定义标识 */
+  jwtHeader: 'Authorization',
   /**jwt令牌配置 https://github.com/auth0/node-jsonwebtoken */
+  /**验证令牌有效期，相差不足xx分钟，自动刷新缓存 */
+  jwtRefreshIn: '20m', // https://github.com/vercel/ms
   jwt: {
     /**令牌算法 */
     algorithm: 'HS512',
@@ -93,5 +97,17 @@ export default {
     mathMin: 1,
     /**算数值最大值，默认9 */
     mathMax: 9,
+  },
+  /**用户配置 */
+  user: {
+    /**密码 */
+    password: {
+      /**密码最大错误次数 */
+      maxRetryCount: 5,
+      /**密码锁定时间（默认10分钟） */
+      lockTime: 10,
+    },
+    /**超级管理员列表 */
+    superAdmin: ['1'],
   },
 } as MidwayConfig;
