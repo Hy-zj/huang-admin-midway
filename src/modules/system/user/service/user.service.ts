@@ -2,12 +2,13 @@
  * @Description: 系统用户业务层
  * @Author: huangyue
  * @LastEditors: huangyue
- * @LastEditTime: 2023-03-24 11:26:48
+ * @LastEditTime: 2023-03-27 10:56:50
  */
 import { Inject, Provide } from '@midwayjs/core';
-import { SysUserInterface } from '../interface/user.interface';
+import { ISysUser } from '../interface/user.interface';
 import { MysqlManager } from '../../../../source/mysql'
 import { SysUser } from '../model/user.model';
+
 
 /**用户信息实体映射 */
 const SYS_USER_RESULT = new Map<string, string>();
@@ -51,7 +52,7 @@ function parseSysUserResult(rows) {
 }
 
 @Provide()
-export class SysUserService implements SysUserInterface {
+export class SysUserService implements ISysUser {
 
     @Inject()
     private db: MysqlManager;

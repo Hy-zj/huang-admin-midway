@@ -2,7 +2,7 @@
  * @Description:  
  * @Author: huangyue
  * @LastEditors: huangyue
- * @LastEditTime: 2023-03-23 17:32:12
+ * @LastEditTime: 2023-03-27 11:02:00
  */
 import { Controller, Get, Inject, Provide, Query } from "@midwayjs/core";
 import { SysUserService } from '../service/user.service';

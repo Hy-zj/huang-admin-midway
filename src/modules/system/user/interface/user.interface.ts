@@ -4,9 +4,9 @@ import { SysUser } from "../model/user.model";
  * @Description: 系统用户接口
  * @Author: huangyue
  * @LastEditors: huangyue
- * @LastEditTime: 2023-03-24 11:10:26
+ * @LastEditTime: 2023-03-27 10:23:59
  */
-export interface SysUserInterface {
+export interface ISysUser {
     /**
  * 根据条件分页查询用户列表
  *
